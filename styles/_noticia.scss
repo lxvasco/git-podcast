@@ -1,0 +1,136 @@
+
+
+.new{
+   position: relative;
+    display: flex;
+    flex-direction: column;    
+    transform: translateY(-100px);  
+              
+    
+
+    &-image{
+        width: 100vw;
+        height: auto;
+        
+    }
+
+
+   &-tittle{  
+        width: 50vw;      
+        font-family: $font-tittle;
+        color:#060A24; 
+        padding-left: em(16);
+        padding-top: em(27);
+        
+        
+        
+
+        &-1{
+            font-size: 36px;
+            font-weight: 400;
+            margin: 0;
+            line-height: 1.2; 
+        }        
+             
+    }
+
+    &-text{             
+        font-family: $font-text;
+        font-size: em(14);
+        line-height: 1.4;
+        text-align: justify;
+        color: #060A24;
+        padding-top: em(8);
+        padding-left: em(16);
+        padding-right: em(16); 
+           
+
+    }
+
+    
+}
+
+
+@media screen and (min-width: 768px){
+
+    .new{
+        display: grid;
+        grid-template-columns: 1fr em(360) em(10) em(300) 1fr;
+        grid-template-rows: em(169) 40px em(204) 1fr;
+        
+
+        &-image{
+            width: 360px;
+            height:519px;
+            grid-area: 1/2/2/3;
+             
+        }
+    
+    
+       &-tittle{      
+            font-size: 18px;
+            font-weight: 400;           
+            grid-area: 2/4/3/5;
+            padding-left: 0;
+            
+    
+            &-1{
+                
+                margin: 0;
+                line-height: 1.2; 
+            } 
+        } 
+        
+
+        &-text{             
+            
+            grid-area: 3/4/4/5;
+            padding-top: em(16);   
+            font-size: em(14);
+            padding-left: 0;
+            text-align: left; 
+    
+        }
+
+
+    }
+
+
+
+}
+
+
+
+@media screen and (min-width: 1200px){
+
+    .new{
+       
+        display: grid;
+        grid-template-columns: em(200) em(457) em(62) em(464) 1fr;
+        grid-template-rows: em(169) 40px em(204) 1fr;
+
+        &-image{
+            width: 457px;
+            height: 660px;
+            
+        }
+    
+    
+       &-tittle{      
+            font-size: 22px;
+            
+            
+        } 
+        
+
+        &-text{             
+        
+            padding-top: em(24);   
+            font-size: em(16);
+             
+    
+        }
+    }
+
+
+}

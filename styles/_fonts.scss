@@ -1,0 +1,16 @@
+
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@100;200;300;400;500&family=IBM+Plex+Sans:wght@100;400;500;600&display=swap');
+
+$font-text: 'IBM Plex Mono', monospace;
+$font-tittle: 'IBM Plex Sans';
+
+@function em($px){
+    @return  #{$px/16}em;
+}
+
+@mixin borde {
+    border:1px solid transparent;
+    
+}
+
+

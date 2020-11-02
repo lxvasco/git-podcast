@@ -1,0 +1,146 @@
+body{
+    margin: 0;
+}
+
+.navigation{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-content: center;
+    width: 100vw;    
+    margin: 0;
+    
+    
+    &-row{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;      
+        width: 100vw;
+             
+    }
+
+    &-column{ 
+        display: flex; 
+        flex-direction: column;            
+        width: 100vw;
+        overflow: hidden;    
+        max-height:0;
+        transition: all 1s ease; 
+                 
+    }
+
+    &-logo{
+        width: em(24);
+        height: em(24);
+        padding: em(10) em(16);
+    }
+
+    &-action{
+        width: em(18);
+        height: em(12);
+        padding: em(10) em(16);
+       
+    }
+   
+    &-hiddenAction{
+        position: absolute;
+        display: none;
+        
+    }
+
+    &-menu{
+        width: 100vw;       
+        background-color: #0000EC;
+        margin:0 ;
+        top:em(44);
+        list-style: none;
+        padding: em(16);
+            
+    }
+
+    &-option{        
+        height: em(52);                
+      
+    }
+
+    &-link{
+        font-family: $font-text;
+        font-weight: 100;
+        color: white;
+        font-size:em(16);
+        text-transform: uppercase;
+        text-decoration: none;    
+    }
+
+    &-hiddenAction:checked ~ &-column{
+        max-height: em(224);
+    }
+ 
+}
+
+@media screen and (min-width: 764px){
+
+    .navigation{        
+        flex-direction: row;     
+        width: 100vw;    
+        margin: 0; 
+
+        &-row{
+            display:flex;         
+            height: em(80);
+            width: 19vw; 
+                      
+        }     
+        
+        &-column{
+            display:flex;          
+            max-height: em(80); 
+            width: 80vw; 
+            justify-content: flex-end;
+            align-items: center;                                        
+         
+        }     
+
+        &-logo{
+            width: em(36);
+            height: em(36);
+            padding: em(22) em(50);
+        }
+    
+        &-action{
+            display: none;           
+        }
+
+        &-menu{ 
+            display: flex; 
+            justify-content: flex-end;
+            align-items: center;
+            flex-direction: row; 
+            background-color: white;
+            list-style: none;    
+            padding: em(22) em(50);    
+            width: 65vw;              
+                
+        }
+    
+        &-option{        
+            height: em(28); 
+            padding-left: em(48);          
+          
+        }
+    
+        &-link{
+            font-family: $font-text;
+            color: #060A24;
+            font-size:em(16);
+            text-transform: uppercase;
+            text-decoration: none;          
+             
+        }
+   
+    }       
+
+}
+
+
