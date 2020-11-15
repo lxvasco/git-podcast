@@ -87,6 +87,10 @@ body {
   text-decoration: none;
 }
 
+.navigation-link:hover {
+  background-color: #00F3BB;
+}
+
 .navigation-hiddenAction:checked ~ .navigation-column {
   max-height: 14em;
 }
@@ -230,8 +234,8 @@ body {
   display: grid;
   -ms-grid-rows: 0.8125em 1.375em 0.8125em;
       grid-template-rows: 0.8125em 1.375em 0.8125em;
-  -ms-grid-columns: 1em (1fr)[3] 1em;
-      grid-template-columns: 1em repeat(3, 1fr) 1em;
+  -ms-grid-columns: 1em 1fr 1fr 1fr 1em;
+      grid-template-columns: 1em 1fr 1fr 1fr 1em;
   padding-bottom: 1.5em;
   -webkit-text-decoration: #00F3BB;
           text-decoration: #00F3BB;
@@ -398,6 +402,8 @@ body {
   margin-bottom: 0.6875em;
   overflow: hidden;
   border-radius: 0.625em;
+  border-width: 0px;
+  background-color: transparent;
 }
 
 @media screen and (min-width: 768px) {
@@ -680,7 +686,6 @@ body {
 }
 
 .themes-img {
-  width: 32.5;
   height: auto;
 }
 
@@ -704,8 +709,8 @@ body {
   .themes-container {
     display: -ms-grid;
     display: grid;
-    -ms-grid-columns: (1fr)[6];
-        grid-template-columns: repeat(6, 1fr);
+    -ms-grid-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     -ms-grid-rows: 11.25em;
         grid-template-rows: 11.25em;
   }
